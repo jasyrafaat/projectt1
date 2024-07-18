@@ -1,0 +1,215 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/*  ثابته للصفحه كلهاproject,aboutدا بدل ما تكبيهم مرتين في  */
+.container{
+    width: 90%;
+    margin: 100px auto;
+}
+html{
+    scroll-behavior: smooth;
+}
+.navbar{
+    /*الصف كله جمب بعض */
+    display: flex;   
+    /*نفس المحاذاه  */
+    align-items: center;
+    /* شمال خالص ويمين خالص  */
+    justify-content: space-between;
+    /* background-color: gray; */
+    /* مساحه داخليه 1 فوق وتحت 2 يمين وشمال*/
+    padding: 20px 35px;
+}
+.navbar h2{
+    /*  bold كله بيبقي سميك h2واللي زيها  */
+    font-weight: normal;
+    letter-spacing: 3px;
+}
+.navbar h2 span{
+    font-weight: bold;
+}
+.navbar ul{
+    /* لازاله النقط جمب كل ايقونه */
+    list-style: none;
+    /* جمب بعض ايقونات ال3*/
+    display: flex;
+    /* مسافه بين كل ايقونه والتانيه */
+    gap: 25px;
+}
+ 
+.navbar ul li{ 
+    padding: 10px;
+    transition: 0.5s;
+    /* طريقه اخري
+       جمب بعض ال3 ايقونات
+    display: inline-block;
+    margin-right: 35px;
+  */}
+.navbar ul li :hover{
+background-color: rgb(177, 174, 174);
+
+
+}
+
+.navbar ul li a{
+    /* لازاله الخط تحت كل ايقونه */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    padding: 18px;
+    transition: 0.5s;
+    /* مسافه بين كل كلمه وكلمه */
+    letter-spacing: 3px;
+    /* مسافه بين كل جمله وجمله Word-spacing */
+}
+.header{
+    background-image: url(1.jpg);
+    max-width: 100%;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+}
+.header .header-text{
+    position: absolute;
+    top: 48%;
+    left: 40%;
+    color: aliceblue;
+    font-size: 40px;
+}
+.header .header-text span{
+    background-color: black;
+    padding: 10px;
+    opacity: 0.7;
+}
+
+/* projects */
+.projects{ 
+    /* ثوابت */
+    width: 90%;
+    margin: 100px auto;
+    /* لكن اي نص text-align:center
+    margin autoعاوز اجبهم في النص يبقيdiv اي عنصر صوره  */
+}
+.projects h2{
+    margin-bottom: 50px;
+}
+hr{
+    margin: 50px 0px;
+    opacity: 0.5;
+}
+.projects .projects-content{
+    display: flex;
+/* لما توصل للاخر السطر انزل علي اللي بعده */
+   flex-wrap: wrap;
+   align-items: center;
+   /* تجبهم كلهم في النص واللي فوق برده زياده */
+   justify-content: center;
+   /* مسافه بين كل صوره بكلامها والتانيه */
+   gap: 10px;
+}
+/*  product بتاعها هو parent علشان اغير حجم الصوره مش بتعرف غير  */
+.projects .projects-content .project{
+   width: 24%;
+/* طريقه اخري اقسم بيها  */
+   /* margin: 1%;
+   width: calc(100% / 4 - 2%); */
+   position: relative;
+}
+/* parentعشان حجم الصوره يطلع كامل بس لازم خطوه 24 في الميه قابلها علشان حددت بيها ال  */
+.projects .projects-content .project img{
+    width: 100%;
+}
+.projects .projects-content .project p{
+    background-color: black;
+    padding: 10px;
+    color:aliceblue;
+    /* parentهو واخد 100 في الميه من حجم ال
+    width:100% ; */
+    position: absolute;
+    top: 0;
+}
+/* About */
+.about{
+    width: 90%;
+    margin: 100px auto;
+}
+.about .about-text{
+    /* ابعد برجراف عن الصوره برجراف فوق صوره تحت */
+    margin-bottom: 100px;
+   
+}
+.about .chars{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.about .chars .char{
+    width: 24%;
+}
+/* كل الكلام اللي جواه مع بعض يطلع نفس المسافه */
+.about .chars .char > *{
+    margin-top: 15px;
+}
+.about .chars .char img{
+    width: 100%;
+}
+.about .chars .char h4{
+    /* هيظهر بوضوح قد ايnormalدرجات الخط ال */
+    font-weight: 400;
+    opacity: 0.5;
+}
+.about .chars .char button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 18px;
+}
+.about .chars .char button:hover{
+    background-color: #ddd;
+}
+/* contact */
+.contact p{
+    margin-bottom: 40px;
+}
+.contact input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+}
+/*input لازاله الخط اللي بيطلع افتراضي في  */
+.contact input:focus{
+    outline: none;
+}
+.contact button{
+    margin-top: 30px;
+    padding: 10px;
+    background-color: black;
+    color: aliceblue;
+    cursor: pointer;
+    transform: 0.5s;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.contact button:hover{
+    background-color:#ccc;
+    color: #222;
+    transition: 0.5s;
+    
+}
+.photo{
+    width: 85%;
+}
+.photo img{
+    margin-left: 110px;
+    width: 100%;
+}
